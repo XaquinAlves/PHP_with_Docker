@@ -1,6 +1,7 @@
 # Docker: PHP & MySQL
 
-Se ha añadido soporte para trabajar con otras versiones de php. Se ha modificado el archivo docker de la máquina para instalar
+Se ha añadido soporte para trabajar con otras versiones de php. Se ha modificado el archivo docker de la máquina para instalar:
+
 * pdo
 * pdo_mysql
 * zip
@@ -12,6 +13,7 @@ Se ha añadido soporte para trabajar con otras versiones de php. Se ha modificad
 Se han habilitado los módulos `rewrite` y `headers`.
 
 Además se ha modificado el fichero php.ini modificando las siguientes directivas:
+
 * memory_limit=512M
 * max_execution_time=12000
 * post_max_size=256M
@@ -21,6 +23,7 @@ Además se ha modificado el fichero php.ini modificando las siguientes directiva
 Se pueden agregar/modificar directivas adicionales añadiendo/modificando el fichero `./docker/php/custom-php.ini`
 
 Se ha instalado xdebug con la siguiente configuración:
+
 * zend_extension=xdebug.so
 * xdebug.mode=develop,debug
 * xdebug.start_with_request=yes
