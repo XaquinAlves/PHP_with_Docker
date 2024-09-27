@@ -37,6 +37,8 @@ RUN curl -sSLf \
 #Instalamos composer
 RUN install-php-extensions @composer
 
+RUN install-php-extensions decimal
+
 #Para poder usar ping
 #RUN apt-get update && apt-get install -y iputils-ping
 
