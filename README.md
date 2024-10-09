@@ -31,6 +31,7 @@ Se ha instalado xdebug con la siguiente configuración:
 * xdebug.discover_client_host=0
 * xdebug.client_host=host.docker.internal
 * xdebug.log_level=7
+* xdebug.var_display_max_depth=10
 * xdebug.log=/tmp/xdebug.log
 
 Se puede modificar la configuración modificando el fichero `./docker/php/xdebug.ini`
@@ -79,7 +80,7 @@ Instala rápidamente un ambiente de desarrollo local para trabajar con [PHP](htt
 
 Utilizar *Docker* es sencillo, pero existen tantas imágenes, versiones y formas para crear los contenedores que hacen tediosa esta tarea. Este proyecto ofrece una instalación rápida, con versiones estandar y con la mínima cantidad de modificaciones a las imágenes de Docker. 
 
-Viene configurado con  `PHP 8.0` y `MySQL 8.0`, además se incluyen las extensiones `gd`, `zip` y `mysql`.
+Viene configurado con  `PHP 8.0` y `MySQL LTS`, además se incluyen las extensiones `gd`, `zip` y `mysql`.
 
 ## Configurar el ambiente de desarrollo
 
