@@ -20,6 +20,9 @@ RUN apt-get -y update \
 && docker-php-ext-configure intl \
 && docker-php-ext-install intl
 
+#Install mysqli
+RUN docker-php-ext-install mysqli
+
 # install other extensions
 #RUN apt-get install -y php-cli php-fpm php-json php-common php-mysql php-zip php-gd php-mbstring php-curl php-xml php-pear php-bcmath php-intl php-curl
 
@@ -41,6 +44,17 @@ RUN install-php-extensions decimal
 
 #Para poder usar ping
 #RUN apt-get update && apt-get install -y iputils-ping
+
+#Instalamos phpcs y phpcbf
+#Install PHP_CodeSniffer
+RUN apt-get update && apt-get install -y wget && apt-get install -y vim && \
+    wget https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar && \
+    wget https://squizlabs.github.io/PHP_CodeSniffer/phpcbf.phar
+
+RUN chmod u+x *.phar
+
+RUN mv phpcbf.phar /usr/local/bin/phpcbf
+RUN mv phpcs.phar /usr/local/bin/phpcs
 
 #Cambiamos document root para apuntar al directorio del index
 ARG document_root
