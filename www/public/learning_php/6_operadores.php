@@ -34,7 +34,27 @@ echo "\n";
 // Lógicos
 $x = 10;
 $y = 20;
-
+// AND
 if ($x == 10 && $y == 20) {
     echo "X e Y valen 10 e 20";
 }
+if ($x == 10 and $y == 20) {
+    echo "X e Y valen 10 e 20";
+}
+//OR
+if ($x == 10 || $y == 20) {
+    echo "X ou Y valen 10 ou 20";
+}
+if ($x == 10 or $y == 20) {
+    echo "X ou Y valen 10 ou 20";
+}
+// XOR
+if ($x == 10 xor $y == 30) {
+    echo "X valen 10 ou Y vale 20";
+}
+
+
+$user = "";
+var_dump(empty($use));
+echo "\n";
+echo $estado = empty($user) ? "anonimo" : "logeado";

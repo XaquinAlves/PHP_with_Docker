@@ -61,3 +61,4 @@ services:
       UPLOAD_LIMIT: 256M
     networks:
       - network-id
+
