@@ -19,3 +19,46 @@ switch ($dia) {
         break;
 }
 echo "\n";
+
+// Do it faster
+
+$diaSemana = [
+    1 => "Lunes",
+    2 => "Martes",
+    3 => "Miércoles",
+    4 => "Jueves",
+    5 => "Viernes",
+    6 => "Sábado",
+    7 => "Domingo"
+];
+
+echo $diaSemana[$dia] . "\n";
+
+
+// match
+
+$dia2 = match($dia){
+    1 => "Lunes",
+    2 => "Martes",
+    3 => "Miércoles",
+    4 => "Jueves",
+    5 => "Viernes",
+    6 => "Sábado",
+    7 => "Domingo",
+    default => "Numero non valido"
+};
+echo "El dia es: $dia2 \n";
+
+$tipo_dia = match($dia){
+    1,2,3,4,5 => "dia laborable",
+    6,7 => "fin de semana",
+    default => "Numero non valido"
+};
+echo "El dia es: $tipo_dia \n";
+
+$tipo_dia2 = match($dia){
+    $dia >= 1 && $dia <6 => "dia laborable",
+    6,7 => "fin de semana",
+    default => "Numero non valido"
+};
+echo "El dia es: $tipo_dia2 \n";

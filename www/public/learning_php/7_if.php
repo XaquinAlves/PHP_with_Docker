@@ -18,4 +18,3 @@ if ($hora >= 6 && $hora < 12) {
     echo "Buenas noches";
 }
 echo "\n";
-
