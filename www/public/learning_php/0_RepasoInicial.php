@@ -25,3 +25,14 @@ $outra_variable = $unha_variable;
 var_dump($outra_variable);
 
 $unha_variable = "Cambio";
+
+$variable = "ola";
+echo "asi non recoñece o retroceso de carro en web";
+echo $variable;
+echo "\n";
+echo $variable;
+
+?>
+// Solucion
+<h1> <?php echo $variable . "\n" ?></h1>
+<h1> <?= $variable?> </h1>

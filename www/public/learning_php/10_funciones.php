@@ -38,4 +38,25 @@ function suma_numeros(...$x)
     }
     return $resultado;
 }
-echo suma_numeros(2,3);
+echo suma_numeros(2,3) .  "\n";
+
+function suma_numeros2(...$x)
+{
+    $resultado = 0;
+    $len = count($x);
+    for ($i = 0; $i < $len; $i++) {
+        $resultado += $x[$i];
+    }
+    return $resultado;
+}
+echo suma_numeros2(2,3) . "\n";
+
+// Saludar a unha familia
+function saludar_familia($apellido,...$nombres)
+{
+    foreach ($nombres as $nombre) {
+        echo "Hola $nombre $apellido\n";
+    }
+}
+
+saludar_familia("Perez", "Maria", "Juan");
