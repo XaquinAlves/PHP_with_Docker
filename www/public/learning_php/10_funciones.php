@@ -49,7 +49,7 @@ function suma_numeros2(...$x)
     }
     return $resultado;
 }
-echo suma_numeros2(2,3) . "\n";
+echo suma_numeros2(2,"7 dias") . "\n";
 
 // Saludar a unha familia
 function saludar_familia($apellido,...$nombres)
@@ -60,3 +60,12 @@ function saludar_familia($apellido,...$nombres)
 }
 
 saludar_familia("Perez", "Maria", "Juan");
+
+echo "Tipado de funciones\n";
+function suma_numeros3(int $x, int $y): int
+{
+    return $x + $y;
+}
+// si pomos <php? declare(strict_types=1); esto non funciona
+echo suma_numeros3("1.1",2);
+// Pero echo suma_numeros3("7 dias",2) aquí non vai NUNCA
