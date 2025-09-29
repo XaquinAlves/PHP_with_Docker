@@ -114,6 +114,7 @@ print_r($arrayEjemplo);
 $texto_ejemplo = "ola OLA que tal tal tal";
 function frecuenciaPalabras(string $text): array
 {
+    // My version
     $result = [];
     $words = explode(" ", strtolower($text));
     foreach ($words as $word) {
@@ -128,3 +129,57 @@ function frecuenciaPalabras(string $text): array
     return $result;
 }
 print_r(frecuenciaPalabras($texto_ejemplo));
+
+function frecuenciaParabrasNull(string $text) : array
+{
+    $result = [];
+    $words = explode(" ", strtolower($text));
+
+    foreach ($words as $word) {
+        $result[$word] = ($result[$word] ?? 0) + 1;
+    }
+
+    return $result;
+}
+
+print_r(frecuenciaParabrasNull($texto_ejemplo));
+
+function frecuenciaPalabrasTernaria(string $text): array
+{
+    $result = [];
+    $words = explode(" ", strtolower($text));
+
+    foreach ($words as $word) {
+
+    }
+}
+
+/*
+ * Crea unha función que reciba multiples strings y devuelva el mas largo
+ */
+
+function longestString(...$text) : string
+{
+    $bigger = "";
+
+    foreach ($text as $word) {
+        if (strlen($word) > strlen($bigger)) {
+            $bigger = $word;
+        }
+    }
+
+    return $bigger;
+}
+
+echo longestString("ola","ola que tal", "ola que tal estás");
+echo "\n";
+
+/*
+ * Crea unha función que imite el comportamiento de array_diff
+ */
+$array_ejemplo = array_diff([1,2,3,4],[1,2]);
+print_r($array_ejemplo);
+
+function arrayDiffPropio(...$array) : array {
+
+}
