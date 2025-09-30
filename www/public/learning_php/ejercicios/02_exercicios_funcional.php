@@ -162,3 +162,15 @@ function palabraMasLarga(array $palabras): string{
 }
 echo "=== Ejercicio 10 ===\n";
 echo palabraMasLarga(["sol", "estrella","galaxia","universos"]);
+
+/**
+ * Ejercicio 11: Dado un array de palabras, devuevle un array con las palabras ordenadas
+ * por longitud de menor a mayor.(Usando usort con funcion anónima + array_values)
+ */
+function ordenarPorLongitusd(array $palabras): array
+{
+
+}
+
+echo "=== Ejercicio 11 ===\n";
+printr(ordenarPorLongitud(["php", "map", "filter", "reduce", "programacion]));
