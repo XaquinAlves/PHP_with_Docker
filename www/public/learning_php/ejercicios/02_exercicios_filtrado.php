@@ -7,7 +7,7 @@
  * Mostrar el original y el sanitizado.
  */
 
-function sanitizeHtml(...$texts)
+function sanitizeHtml(...$texts) : void
 {
     foreach ($texts as $text) {
         echo "Original: $text\n";
@@ -36,7 +36,7 @@ function validarNumero(array $listaValores) : void
     }
 }
 echo "=== Ejercicio 2 ===\n";
-print_r(validarNumero($listaValores));
+validarNumero($listaValores);
 echo "\n\n";
 
 /**
@@ -63,7 +63,7 @@ function validarIp(array $listaIps) : void
 }
 
 echo "=== Ejercicio 3 ===\n";
-print_r(validarIp(["192.168.1.1", "256.100.50.25", "127.0.0.1", "::1", "127.0.0.999"]));
+validarIp(["192.168.1.1", "256.100.50.25", "127.0.0.1", "::1", "127.0.0.999"]);
 echo "\n\n";
 
 /**
@@ -95,7 +95,7 @@ validarEmails($emails);
 echo "\n\n";
 
 /**
- * 5. Crea un array con URLs sospechosas:
+ * 5. Crea un array con URLS sospechosas:
  *
  * Objetivo:
  *
@@ -109,7 +109,7 @@ $listaUrls = [
   "https://google.com"
  ];
 
-function validarURL(array $listaUrls)
+function validarURL(array $listaUrls) : void
 {
     foreach ($listaUrls as $url) {
         $sanitizado = filter_var($url, FILTER_SANITIZE_URL);
@@ -121,7 +121,7 @@ function validarURL(array $listaUrls)
 }
 
 echo "=== Ejercicio 5 ===\n";
-echo validarURL($listaUrls);
+validarURL($listaUrls);
 echo "\n\n";
 
 /**
@@ -131,7 +131,7 @@ echo "\n\n";
 
 $valores = [0, 5, 10, 11, -3];
 
-function enRango(array $listaValores)
+function enRango(array $listaValores) : void
 {
     $min = 1;
     $max = 10;
