@@ -169,8 +169,8 @@ echo palabraMasLarga(["sol", "estrella","galaxia","universos"]);
  */
 function ordenarPorLongitusd(array $palabras): array
 {
-
+    return [];
 }
 
 echo "=== Ejercicio 11 ===\n";
-printr(ordenarPorLongitud(["php", "map", "filter", "reduce", "programacion]));
+printr(ordenarPorLongitud(["php", "map", "filter", "reduce", "programacion"]));
