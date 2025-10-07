@@ -137,10 +137,27 @@ echo "\n\n";
  * ===============================================
  */
 
-$string = "abc123<>"; // \W alfanuméricos \d dígitos \S espacios
+$string = "abc123<>"; // \w alfanuméricos \d dígitos \s espacios, en maisculas negado
 
 echo "Números en $string: " . preg_match_all("/\d/", $string) . "\n";
+echo "\n";
 
+/**
+ * ===============================================
+ * DECLARACIÓNS
+ * ===============================================
+ */
+
+/*
+    - \b -> límite de palabra
+    - \B -> non e límite de palabra
+*/
+
+$string1 = "Es ahora";
+$string2 = "Es la hora";
+echo "Palabra hora en \"$string1\": " . preg_match_all("/\bhora\b/", $string1) . "\n";
+echo "Palabra hora en \"$string2\": " . preg_match_all("/\bhora\b/", $string2) . "\n";
+echo "\n";
 /**
  * ===============================================
  * FUNCIÓNS
