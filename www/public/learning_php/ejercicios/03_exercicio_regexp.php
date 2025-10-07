@@ -87,7 +87,7 @@ echo "\n\n";
  */
 
 function validarPassword(string $password){
-    echo preg_match("/(?=.*[A-Z])(?=.*[a-z])(?=\d+)(?=.*[?¿¡!@#$%^&*()_+\-=[\]{};':\\]+).{8,}/",$password) ? "$password VALIDA\n" : "$password NON VALIDA\n";
+    echo preg_match("/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*\W).{8,}$/",$password) ? "$password VALIDA\n" : "$password NON VALIDA\n";
 }
 
 validarPassword("Abc123$%");
